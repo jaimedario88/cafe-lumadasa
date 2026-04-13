@@ -1,0 +1,101 @@
+<section id="seleccion" class="py-24 md:py-40 bg-deep-forest text-warm-cream">
+    <div class="container mx-auto px-6">
+        
+        <div class="mb-16 md:mb-20 max-w-3xl">
+            <span class="font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-warm-cream/40 mb-5 block">
+                {{ hugo.Data.landing.cafe.prefijo }}
+            </span>
+            <h2 class="font-display text-5xl md:text-7xl mb-6 leading-tight text-balance">
+                {{ hugo.Data.landing.cafe.titulo }}
+            </h2>
+            <p class="font-body text-lg md:text-xl text-warm-cream/70 leading-relaxed max-w-2xl">
+                {{ hugo.Data.landing.cafe.subtitulo }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+            
+            <!-- Signature Origin Card (Left) -->
+            <div class="lg:col-span-4 bg-surface-variant text-deep-forest rounded-[2rem] shadow-2xl relative overflow-hidden group flex flex-col">
+                
+                <!-- Text Container -->
+                <div class="relative z-10 p-8 sm:p-10 w-full flex flex-col flex-grow">
+                    <h3 class="font-display text-3xl mb-6 border-b border-deep-forest/10 pb-4 lg:text-left">Planadas Selección</h3>
+                    
+                    <!-- Vertical List -->
+                    <div class="space-y-3 font-body lg:text-left">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-deep-forest/40 mb-1">Altitud</span>
+                            <span class="text-sm font-medium tracking-tight">{{ hugo.Data.landing.cafe.altitud }}</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-deep-forest/40 mb-1">Perfil</span>
+                            <span class="text-sm font-medium tracking-tight">{{ hugo.Data.landing.cafe.perfil }}</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-deep-forest/40 mb-1">Notas de Cata</span>
+                            <span class="text-sm font-bold tracking-tight text-terracotta italic leading-snug">{{ delimit hugo.Data.landing.cafe.notas " · " }}</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-deep-forest/40 mb-1">Proceso</span>
+                            <span class="text-sm font-medium tracking-tight">{{ delimit hugo.Data.landing.cafe.procesos " & " }}</span>
+                        </div>
+
+                        <div class="pt-6">
+                            <a href="mailto:{{ hugo.Data.landing.cta.email }}" class="inline-block bg-terracotta text-warm-cream px-8 py-3 rounded-xl font-body text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-md active:scale-95 text-center w-full lg:w-auto">
+                                {{ hugo.Data.landing.hero.cta_label }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grounded Image -->
+                <div class="w-full mt-auto bg-deep-forest group-hover:scale-105 transition-transform duration-700 relative z-0">
+                    {{ with resources.Get "images/coffee-bag.png" }}
+                        {{ $bag := .Process "webp q90 resize 800x" }}
+                        <img src="{{ $bag.RelPermalink }}" alt="Café LUMADASA Bag" class="w-full h-auto object-cover object-top opacity-95">
+                    {{ end }}
+                </div>
+            </div>
+
+            <!-- Context Columns (Right) -->
+            <div class="lg:col-span-8 flex flex-col pt-8 lg:pt-0">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="border-l border-warm-cream/10 pl-6 lg:pl-8">
+                        <h4 class="font-display text-2xl mb-4 italic text-warm-cream">{{ hugo.Data.landing.cafe.terroir_titulo }}</h4>
+                        <p class="font-body text-sm text-warm-cream/60 leading-relaxed text-balance">
+                            {{ hugo.Data.landing.cafe.terroir_cuerpo }}
+                        </p>
+                    </div>
+
+                    <div class="border-l border-warm-cream/10 pl-6 lg:pl-8">
+                        <h4 class="font-display text-2xl mb-4 italic text-warm-cream">{{ hugo.Data.landing.cafe.microclima_titulo }}</h4>
+                        <p class="font-body text-sm text-warm-cream/60 leading-relaxed text-balance">
+                            {{ hugo.Data.landing.cafe.microclima_cuerpo }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Large Center Quote / Image Block -->
+                <div class="mt-12 flex-grow min-h-[300px] md:min-h-[400px] rounded-[2rem] relative overflow-hidden group flex flex-col items-center justify-center p-8 md:p-14 text-center basis-0">
+                    {{ with resources.Get "images/hero.png" }}
+                        {{ $img := .Process "webp q80 filter shadow resize 800x" }}
+                        <div class="absolute inset-0 bg-deep-forest z-0"></div>
+                        <img src="{{ $img.RelPermalink }}" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-25 group-hover:scale-105 group-hover:opacity-30 transition-all duration-1000 z-10" alt="Context Background">
+                    {{ else }}
+                        <div class="absolute inset-0 bg-surface-low/5 z-0"></div>
+                    {{ end }}
+                    
+                    <div class="relative z-20">
+                        <blockquote class="font-display text-3xl md:text-5xl leading-tight italic text-warm-cream drop-shadow-xl text-balance">
+                            "{{ hugo.Data.landing.cafe.cita }}"
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

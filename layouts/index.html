@@ -1,11 +1,9 @@
 {{ define "main" }}
-<main class="min-h-screen bg-warm-cream flex items-center justify-center">
-    <div class="text-center">
-        <h1 class="font-display text-5xl text-deep-forest mb-4">Café LUMADASA</h1>
-        <p class="font-body text-lg text-deep-forest/70">Planadas, Tolima</p>
-        <div class="mt-8 inline-block bg-terracotta text-warm-cream font-body px-8 py-3 rounded-full">
-            Tailwind CSS v4 está funcionando ✓
-        </div>
-    </div>
-</main>
+  {{ partial "nav.html" . }}
+  {{ partial "hero.html" . }}
+  {{ partial "story.html" . }}
+  {{ partial "coffee-profile.html" . }}
+  {{ partial "impact.html" . }}
+  {{ partial "cta-join.html" . }}
+  {{ partial "footer.html" . }}
 {{ end }}

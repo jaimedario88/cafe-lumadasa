@@ -1,0 +1,43 @@
+<section id="impacto" class="py-24 md:py-40 bg-warm-cream">
+    <div class="container mx-auto px-6">
+        
+        <div class="max-w-4xl mb-24">
+            <span class="font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-deep-forest/40 mb-6 block">
+                {{ hugo.Data.landing.impacto.prefijo }}
+            </span>
+            <h2 class="font-display text-5xl md:text-7xl text-deep-forest leading-tight mb-8">
+                {{ hugo.Data.landing.impacto.titulo }}
+            </h2>
+            <p class="font-body text-xl md:text-2xl text-deep-forest/60 max-w-2xl leading-relaxed">
+                {{ hugo.Data.landing.impacto.subtitulo }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
+            {{ range hugo.Data.landing.impacto.pilares }}
+                <div class="group">
+                    <div class="mb-10 w-20 h-20 bg-surface-variant rounded-3xl flex items-center justify-center transform group-hover:bg-terracotta group-hover:rotate-6 transition-all duration-500">
+                        {{ if eq .icono "leaf" }}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-deep-forest group-hover:text-warm-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.003 9.003 0 008.341-5.547m-1.296-6.903a9.003 9.003 0 01-8.341-5.547m-1.296 6.903a9.003 9.003 0 018.341 5.547m-1.296-6.903a9.003 9.003 0 00-8.341 5.547m0 0a9 9 0 011.633-5.064m1.11 0a9 9 0 011.633 5.064m-4.376 0a9 9 0 001.633 5.064m1.11 0a9 9 0 001.633-5.064" />
+                            </svg>
+                        {{ else if eq .icono "wheat" }}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-deep-forest group-hover:text-warm-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        {{ else if eq .icono "handshake" }}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-deep-forest group-hover:text-warm-cream transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        {{ end }}
+                    </div>
+                    <h4 class="font-display text-2xl text-deep-forest mb-6">{{ .titulo }}</h4>
+                    <p class="font-body text-deep-forest/60 leading-relaxed">
+                        {{ .cuerpo }}
+                    </p>
+                </div>
+            {{ end }}
+        </div>
+
+    </div>
+</section>
