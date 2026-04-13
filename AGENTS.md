@@ -9,6 +9,7 @@
 * **Fonts:** * **Headline/Display:** `Noto Serif` (Editorial voice).
     * **Body/Labels:** `Manrope` (Precision/functional voice).
 * **Images:** Hugo Image Processing (`webp`, `q90`). Focus on high-res macro textures and misty landscapes.
+* **Interactivity:** Object-Oriented TypeScript modules (`assets/ts/components/`) processed natively via Hugo Pipes (`js.Build`). Strictly no inline `<script>` tags. Ensured by local ESLint.
 
 ## 3. Design Tokens & Surface Philosophy
 * **Primary (Deep Forest):** `#1B3022`
@@ -25,6 +26,8 @@
 * **Typography Consistency:** All primary section headers ("Nuestra Historia", "La Selección", "Impacto") must use a unified structural footprint (e.g. `max-w-3xl`, strictly left-aligned, `text-5xl md:text-7xl leading-tight`) to establish a predictable editorial rhythm without chaotic custom sizing per block.
 * **Asymmetrical Templates:** When generating HTML, favor grid asymmetry (e.g. `col-span-4` vs `col-span-8` container pairings) to balance heavy text blocks with immersive imagery. 
 * **The "Origin Card" Component:** Implement the signature card style for coffee origins using `surface-variant`. Internally, rely on clean vertical stacking: text on top, product photography sitting entirely flush and uncropped at the bottom (`w-full h-auto mt-auto`), allowing dark studio backgrounds to naturally integrate with the card base instead of using complex CSS cropping logic.
+* **SVG Asset Centralization:** Inline `<svg>` tags within HTML layouts are strictly prohibited. All SVGs *must* be extracted into `assets/icons/` as clean `.svg` files and loaded dynamically using Hugo Pipes (e.g. `{{ with resources.Get "icons/name.svg" }}{{ .Content | safeHTML }}{{ end }}`) to keep layout geometry clean.
+
 
 ## 5. Interaction & Conversion
 * **Primary CTA:** Floating WhatsApp button (`#25D366`) and Terracotta (#E17355) "Adquirir Cosecha" buttons.
