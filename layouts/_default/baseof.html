@@ -29,23 +29,8 @@
         </svg>
     </a>
 
-    <script>
-        // Reveal Animations using Intersection Observer
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-    </script>
+    {{ $ts := resources.Get "ts/main.ts" | js.Build | minify | fingerprint }}
+    <script src="{{ $ts.RelPermalink }}" defer></script>
 </body>
 
 </html>
