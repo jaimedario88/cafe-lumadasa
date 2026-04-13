@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+/* Your design tokens from AGENTS.md go here */
+@theme {
+    --color-deep-forest: #1B3022;
+    --color-warm-cream: #F5F5DC;
+    --color-terracotta: #E17355;
+    --color-surface-variant: #E4E4CC;
+    --color-whatsapp: #25D366;
+    --color-ambient-shadow: #796048;
+
+    --font-display: 'Noto Serif', serif;
+    --font-body: 'Manrope', sans-serif;
+}
