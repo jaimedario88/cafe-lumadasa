@@ -20,7 +20,7 @@
                 
                 <!-- Text Container -->
                 <div class="relative z-10 p-8 sm:p-10 w-full flex flex-col grow">
-                    <h3 class="font-display text-3xl mb-6 border-b border-deep-forest/10 pb-4 lg:text-left">Planadas Selección</h3>
+                    <h3 class="font-display text-3xl mb-8 lg:text-left">Planadas Selección</h3>
                     
                     <!-- Vertical List -->
                     <div class="space-y-3 font-body lg:text-left">
@@ -56,14 +56,14 @@
             <div class="lg:col-span-8 flex flex-col pt-8 lg:pt-0">
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="border-l border-warm-cream/10 pl-6 lg:pl-8">
+                    <div class="pl-0 lg:pl-4">
                         <h4 class="font-display text-2xl mb-4 italic text-warm-cream">{{ hugo.Data.landing.cafe.terroir_titulo }}</h4>
                         <p class="font-body text-sm text-warm-cream/60 leading-relaxed text-balance">
                             {{ hugo.Data.landing.cafe.terroir_cuerpo }}
                         </p>
                     </div>
 
-                    <div class="border-l border-warm-cream/10 pl-6 lg:pl-8">
+                    <div class="pl-0 lg:pl-4">
                         <h4 class="font-display text-2xl mb-4 italic text-warm-cream">{{ hugo.Data.landing.cafe.microclima_titulo }}</h4>
                         <p class="font-body text-sm text-warm-cream/60 leading-relaxed text-balance">
                             {{ hugo.Data.landing.cafe.microclima_cuerpo }}
@@ -74,7 +74,7 @@
                 <!-- Large Center Quote / Image Block -->
                 <div class="mt-12 grow min-h-[300px] md:min-h-[400px] rounded-4xl relative overflow-hidden group flex flex-col items-center justify-center p-8 md:p-14 text-center basis-0">
                     {{ with resources.Get "images/hero.png" }}
-                        {{ $img := .Process "webp q80 filter shadow resize 800x" }}
+                        {{ $img := .Process "webp q90 filter shadow resize 800x" }}
                         <div class="absolute inset-0 bg-deep-forest z-0"></div>
                         <img src="{{ $img.RelPermalink }}" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-25 group-hover:scale-105 group-hover:opacity-30 transition-all duration-1000 z-10" alt="Context Background">
                     {{ else }}

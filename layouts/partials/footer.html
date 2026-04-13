@@ -4,9 +4,9 @@
             
             <!-- Logo & Brand -->
             <div class="lg:col-span-4 space-y-8">
-                <a href="/" class="inline-flex flex-col items-center justify-center text-warm-cream w-max">
-                    <span class="font-body text-[10px] sm:text-xs font-bold uppercase tracking-[0.4em] leading-none mb-1 text-warm-cream/80">CAFÉ</span>
-                    <span class="font-display text-3xl sm:text-4xl font-bold uppercase tracking-widest leading-none">LUMADASA</span>
+                <a href="/" class="inline-flex flex-col items-center justify-center w-max text-warm-cream transition-colors duration-300">
+                    <span class="font-body text-[10px] sm:text-xs font-bold uppercase tracking-[0.4em] leading-none mb-1 opacity-80">CAFÉ</span>
+                    <span class="font-display text-2xl sm:text-3xl font-bold uppercase tracking-widest leading-none">LUMADASA</span>
                 </a>
                 <p class="font-body text-warm-cream/50 max-w-xs leading-relaxed">
                     {{ hugo.Data.landing.pie.tagline }}
@@ -20,7 +20,7 @@
 
             <!-- Columns -->
             <div class="lg:col-span-3 lg:offset-1 space-y-6">
-                <h5 class="font-display text-xl border-b border-warm-cream/10 pb-4">Navegación</h5>
+                <h5 class="font-display text-xl mb-6">Navegación</h5>
                 <ul class="space-y-4 font-body text-sm text-warm-cream/50">
                     <li><a href="#historia" class="hover:text-warm-cream transition-colors">Nuestra Historia</a></li>
                     <li><a href="#seleccion" class="hover:text-warm-cream transition-colors">La Selección</a></li>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="lg:col-span-4 space-y-6 text-right lg:text-left">
-                <h5 class="font-display text-xl border-b border-warm-cream/10 pb-4 lg:text-left text-right">{{ index hugo.Data.landing.pie.columnas 0 "titulo" }}</h5>
+                <h5 class="font-display text-xl mb-6 lg:text-left text-right">{{ index hugo.Data.landing.pie.columnas 0 "titulo" }}</h5>
                 <div class="font-body text-sm text-warm-cream/50 space-y-2">
                     <p>{{ hugo.Data.landing.marca.ubicacion }}</p>
                     <p class="text-warm-cream text-lg font-medium mt-4">{{ hugo.Data.landing.cta.email }}</p>
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="pt-12 border-t border-warm-cream/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="pt-12 mt-12 bg-deep-forest flex flex-col md:flex-row justify-between items-center gap-6">
             <p class="font-body text-[10px] uppercase tracking-widest text-warm-cream/20">
                 © {{ now.Format "2006" }} {{ hugo.Data.landing.marca.nombre }}. TODOS LOS DERECHOS RESERVADOS.
             </p>
