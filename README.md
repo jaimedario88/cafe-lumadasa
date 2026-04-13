@@ -18,9 +18,9 @@
 - **Soft Minimalism:** Intentional asymmetry and overlapping boundaries.
 - **Tonal Layering:** The design entirely eschews traditional `1px solid` borders in favor of negative space and subtle tonal shifts (e.g., `surface` to `surface-container-low`).
 - **Color Palette:**
-  - **Primary (Deep Forest):** `#1B3022`
-  - **Surface (Warm Cream):** `#F5F5DC`
-  - **Accent (Terracotta):** `#E17355` (for CTAs)
+    - **Primary (Deep Forest):** `#1B3022`
+    - **Surface (Warm Cream):** `#F5F5DC`
+    - **Accent (Terracotta):** `#E17355` (for CTAs)
 - **Ambient & Glassmorphism:** Coffee-toned ambient shadows and elegant use of `backdrop-blur-xl` in navigation components.
 
 ## 🚀 Local Development
@@ -28,33 +28,48 @@
 ### Prerequisites
 
 1. **Hugo Extended:** Ensure you have the _Extended_ version of Hugo installed (required for Tailwind CSS v4 processing). You can check with:
-   ```bash
-   hugo version
-   ```
-   _Make sure the output includes `+extended`._
+    ```bash
+    hugo version
+    ```
+    _Make sure the output includes `+extended`._
+2. **Node.js & pnpm:** Required for resolving Javascript dependencies like TypeScript, ESLint, and Prettier.
 
 ### Setup & Run
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/jaimedario88/cafe-lumadasa.git
-   cd cafe-lumadasa
-   ```
+    ```bash
+    git clone https://github.com/jaimedario88/cafe-lumadasa.git
+    cd cafe-lumadasa
+    ```
 
-2. Start the Hugo development server:
+2. Install the strict linting and Javascript bundle tools:
 
-   ```bash
-   hugo server
-   ```
+    ```bash
+    pnpm install
+    ```
 
-3. Open your browser and navigate to `http://localhost:1313/`.
+    _(Note: This automatically triggers Husky, cementing our Git Hooks into your local repo)._
+
+3. Start the Hugo development server:
+
+    ```bash
+    hugo server
+    ```
+
+4. Open your browser and navigate to `http://localhost:1313/`.
+
+## 📜 Development Workflow
+
+- **Automated Formatting:** When you run `git commit`, Husky and `lint-staged` immediately intercept it, enforcing `eslint` checks on `.ts` files and running `prettier` natively over your `.html` and `.md` files. You do not need to format them manually.
+- **Conventional Commits:** Your commit messages are tightly controlled via `commitlint`. You must prefix all commits semantically (e.g., `feat: added gallery section` or `fix: padding bug`).
 
 ## 📁 Architecture Notes
 
 - **Data-Driven Content:** All structured content and coffee metadata (altitude, notes, producers) are pulled directly from `data/landing.yaml`.
 - **Modular Layouts:** The core `index.html` structure acts as a modular assembler pulling in partials like `hero`, `story`, `coffee-profile`, `impact`, and `contact`.
 - **Asymmetrical Grid:** The project favors grid asymmetry to balance heavy text blocks with immersive imagery.
+- **TypeScript First:** All interactions reside cleanly in `assets/ts/components/` utilizing ES Modules and classes. Hugo pipes (`js.Build`) natively transpile these with zero external bundler scaffolding needed.
 
 ## ☕ The Origin
 
