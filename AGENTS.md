@@ -22,9 +22,11 @@
 ## 4. Hugo Architecture Rules
 * **Modular Assembler:** The `index.html` must be a clean list of partials: `hero`, `story`, `coffee-profile`, `impact`, `contact`.
 * **Data-First Content:** All metadata (Altitude: 1,600-1,900 msnm, Notes: Chocolate/Panela, Producers: Edwin & María Camila) must be pulled from `data/landing.yaml`.
-* **Asymmetrical Templates:** When generating HTML for sections like "Nuestra Historia," favor split layouts where images bleed off-screen or overlap container boundaries.
-* **The "Origin Card" Component:** Implement the signature asymmetrical card style for coffee origins using `surface-variant` (#E4E4CC) and Noto Serif typography.
+* **Typography Consistency:** All primary section headers ("Nuestra Historia", "La Selección", "Impacto") must use a unified structural footprint (e.g. `max-w-3xl`, strictly left-aligned, `text-5xl md:text-7xl leading-tight`) to establish a predictable editorial rhythm without chaotic custom sizing per block.
+* **Asymmetrical Templates:** When generating HTML, favor grid asymmetry (e.g. `col-span-4` vs `col-span-8` container pairings) to balance heavy text blocks with immersive imagery. 
+* **The "Origin Card" Component:** Implement the signature card style for coffee origins using `surface-variant`. Internally, rely on clean vertical stacking: text on top, product photography sitting entirely flush and uncropped at the bottom (`w-full h-auto mt-auto`), allowing dark studio backgrounds to naturally integrate with the card base instead of using complex CSS cropping logic.
 
 ## 5. Interaction & Conversion
 * **Primary CTA:** Floating WhatsApp button (`#25D366`) and Terracotta (#E17355) "Adquirir Cosecha" buttons.
-* **Glassmorphism:** Use `backdrop-blur-xl` with 80% opacity for the sticky navigation bar.
+* **Dynamic Glassmorphism:** Use `backdrop-blur-xl` for the sticky navigation bar, paired fundamentally with a JS scroll-listener to toggle text foreground colors from light (over hero images) to dark (over cream backgrounds) to preserve accessibility.
+* **Logo Lockup Rigidity:** When mimicking branding via CSS, ensure exact 1:1 structural parity across the Header and Footer components by wrapping the text in an `inline-flex flex-col items-center w-max` container, ensuring the prefix ("CAFÉ") identically centers over the mark ("LUMADASA") regardless of surrounding column alignments.
