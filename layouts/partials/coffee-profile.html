@@ -16,10 +16,10 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             
             <!-- Signature Origin Card (Left) -->
-            <div class="lg:col-span-4 bg-surface-variant text-deep-forest rounded-[2rem] shadow-2xl relative overflow-hidden group flex flex-col">
+            <div class="lg:col-span-4 bg-surface-variant text-deep-forest rounded-4xl shadow-2xl relative overflow-hidden group flex flex-col">
                 
                 <!-- Text Container -->
-                <div class="relative z-10 p-8 sm:p-10 w-full flex flex-col flex-grow">
+                <div class="relative z-10 p-8 sm:p-10 w-full flex flex-col grow">
                     <h3 class="font-display text-3xl mb-6 border-b border-deep-forest/10 pb-4 lg:text-left">Planadas Selección</h3>
                     
                     <!-- Vertical List -->
@@ -78,7 +78,7 @@
                 </div>
 
                 <!-- Large Center Quote / Image Block -->
-                <div class="mt-12 flex-grow min-h-[300px] md:min-h-[400px] rounded-[2rem] relative overflow-hidden group flex flex-col items-center justify-center p-8 md:p-14 text-center basis-0">
+                <div class="mt-12 grow min-h-[300px] md:min-h-[400px] rounded-4xl relative overflow-hidden group flex flex-col items-center justify-center p-8 md:p-14 text-center basis-0">
                     {{ with resources.Get "images/hero.png" }}
                         {{ $img := .Process "webp q80 filter shadow resize 800x" }}
                         <div class="absolute inset-0 bg-deep-forest z-0"></div>

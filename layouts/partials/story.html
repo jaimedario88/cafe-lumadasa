@@ -7,11 +7,11 @@
                 {{ with resources.Get "images/producers.png" }}
                     {{ $img := .Process "webp q90" }}
                     <div class="relative z-10 -ml-20 md:-ml-40 pr-10 md:pr-0">
-                        <img src="{{ $img.RelPermalink }}" alt="Producers" class="w-full h-auto shadow-2xl rounded-tr-[100px] border-[16px] border-warm-cream">
+                        <img src="{{ $img.RelPermalink }}" alt="Producers" class="w-full h-auto shadow-2xl rounded-tr-[100px] border-16 border-warm-cream">
                     </div>
                 {{ end }}
                 <!-- Decorative element -->
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-surface-variant rounded-full -z-0 opacity-50"></div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-surface-variant rounded-full z-0 opacity-50"></div>
             </div>
 
             <!-- Content Column -->
