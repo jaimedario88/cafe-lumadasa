@@ -13,7 +13,7 @@ hero:
   subtitulo: >
     Cultivando los microclimas de Planadas, donde cada grano captura
     un viaje de origen, tradición y resiliencia.
-  cta_label: "Adquirir Cosecha"
+  cta_label: "Nuestra cosecha"
 
 # ─── Nuestra Historia ─────────────────────────────────────────────────────────
 historia:
@@ -24,9 +24,9 @@ historia:
     conectando directamente a productores con consumidores.
     Cada taza representa esfuerzo, resiliencia y esperanza.
   productores:
-    - nombre: "Edwin Ricardo Noreña Cano"
+    - nombre: "Edwin Noreña"
       rol: "Productor · Planadas, Tolima"
-    - nombre: "María Camila Jaramillo Villota"
+    - nombre: "Camila Jaramillo"
       rol: "Productora · Planadas, Tolima"
   nota_productores: >
     Familias campesinas de Planadas, Tolima, comprometidas con la producción
