@@ -5,5 +5,14 @@
   "printWidth": 100,
   "tabWidth": 4,
   "endOfLine": "auto",
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "ignore",
+  "plugins": ["prettier-plugin-go-template"],
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ]
 }
