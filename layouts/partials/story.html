@@ -1,29 +1,41 @@
 <section id="historia" class="py-24 md:py-40 bg-warm-cream overflow-hidden">
     <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center md:items-start gap-20 md:gap-32">
-            
             <!-- Asymmetric Image Column -->
             <div class="w-full md:w-5/12 relative">
-                {{ with resources.Get "images/producers.png" }}
-                    {{ $img := .Process "webp q90" }}
-                    <div class="relative z-10 -ml-20 md:-ml-40 pr-10 md:pr-0">
-                        <img src="{{ $img.RelPermalink }}" alt="Producers" class="w-full h-auto shadow-2xl rounded-tr-[100px] border-16 border-warm-cream">
-                    </div>
+                {{ with resources.Get "images/producers.webp" }} {{ $img := .Process "webp q90" }}
+                <div class="relative z-10 -ml-20 md:-ml-40 pr-10 md:pr-0">
+                    <img
+                        src="{{ $img.RelPermalink }}"
+                        alt="Producers"
+                        class="w-full aspect-[3/4] object-cover shadow-2xl rounded-tr-[100px] border-16 border-warm-cream"
+                    />
+                </div>
                 {{ end }}
                 <!-- Decorative element -->
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-surface-variant rounded-full z-0 opacity-50"></div>
+                <div
+                    class="absolute -top-10 -right-10 w-40 h-40 bg-surface-variant rounded-full z-0 opacity-50"
+                ></div>
             </div>
 
             <!-- Content Column -->
             <div class="w-full md:w-6/12 pt-10">
-                <span class="font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-deep-forest/40 mb-6 block">
+                <span
+                    class="font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-deep-forest/40 mb-6 block"
+                >
                     {{ hugo.Data.landing.historia.prefijo }}
                 </span>
-                <h2 class="font-display text-5xl md:text-7xl text-deep-forest leading-tight mb-10 text-balance">
+                <h2
+                    class="font-display text-5xl md:text-7xl text-deep-forest leading-tight mb-10 text-balance"
+                >
                     {{ hugo.Data.landing.historia.titulo }}
                 </h2>
-                <div class="prose prose-lg text-deep-forest/80 font-body leading-relaxed mb-12 max-w-xl">
-                    <p class="text-xl md:text-2xl font-light italic mb-8 border-l-4 border-terracotta pl-6 py-2">
+                <div
+                    class="prose prose-lg text-deep-forest/80 font-body leading-relaxed mb-12 max-w-xl"
+                >
+                    <p
+                        class="text-xl md:text-2xl font-light italic mb-8 border-l-4 border-terracotta pl-6 py-2"
+                    >
                         {{ hugo.Data.landing.historia.cuerpo }}
                     </p>
                     <p class="text-sm md:text-base leading-loose opacity-70">
@@ -34,14 +46,17 @@
                 <!-- Producer Cards -->
                 <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {{ range hugo.Data.landing.historia.productores }}
-                        <div class="bg-surface-variant p-8 rounded-2xl shadow-ambient">
-                            <h4 class="font-display text-xl text-deep-forest mb-2">{{ .nombre }}</h4>
-                            <p class="font-body text-xs font-bold uppercase tracking-widest text-deep-forest/60">{{ .rol }}</p>
-                        </div>
+                    <div class="bg-surface-variant p-8 rounded-2xl shadow-ambient">
+                        <h4 class="font-display text-xl text-deep-forest mb-2">{{ .nombre }}</h4>
+                        <p
+                            class="font-body text-xs font-bold uppercase tracking-widest text-deep-forest/60"
+                        >
+                            {{ .rol }}
+                        </p>
+                    </div>
                     {{ end }}
                 </div>
             </div>
-
         </div>
     </div>
 </section>
