@@ -74,13 +74,13 @@
                 <div
                     class="w-full mt-auto bg-deep-forest group-hover:scale-105 transition-transform duration-700 relative z-0"
                 >
-                    {{ with resources.Get "images/coffee-bag.webp" }} {{ $bag := .Process "webp q90
-                    resize 800x" }}
-                    <img
-                        src="{{ $bag.RelPermalink }}"
-                        alt="Café LUMADASA Bag"
-                        class="w-full aspect-[4/5] object-cover object-top opacity-95"
-                    />
+                    {{ with resources.Get "images/coffee-bag.webp" }}
+                        {{ $bag := .Process "webp q90 resize 800x" }}
+                        <img
+                            src="{{ $bag.RelPermalink }}"
+                            alt="Café LUMADASA Bag"
+                            class="w-full aspect-[4/5] object-cover object-top opacity-95"
+                        />
                     {{ end }}
                 </div>
             </div>
@@ -115,17 +115,18 @@
                 <div
                     class="mt-12 grow min-h-[300px] md:min-h-[400px] rounded-4xl relative overflow-hidden group flex flex-col items-center justify-center p-8 md:p-14 text-center basis-0"
                 >
-                    {{ with resources.Get "images/hero.png" }} {{ $img := .Process "webp q90 filter
-                    shadow resize 800x" }}
-                    <div class="absolute inset-0 bg-deep-forest z-0"></div>
-                    <img
-                        src="{{ $img.RelPermalink }}"
-                        class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-25 group-hover:scale-105 group-hover:opacity-30 transition-all duration-1000 z-10"
-                        alt="Context Background"
-                    />
+                    {{ with resources.Get "images/hero.png" }}
+                        {{ $img := .Process "webp q90 filter shadow resize 800x" }}
+                        <div class="absolute inset-0 bg-deep-forest z-0"></div>
+                        <img
+                            src="{{ $img.RelPermalink }}"
+                            class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-25 group-hover:scale-105 group-hover:opacity-30 transition-all duration-1000 z-10"
+                            alt="Context Background"
+                        />
                     {{ else }}
-                    <div class="absolute inset-0 bg-surface-low/5 z-0"></div>
+                        <div class="absolute inset-0 bg-surface-low/5 z-0"></div>
                     {{ end }}
+
 
                     <div class="relative z-20">
                         <blockquote

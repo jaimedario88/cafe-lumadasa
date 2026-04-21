@@ -1,14 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @source "hugo_stats.json";
 
 /* Your design tokens from AGENTS.md go here */
 @theme {
-    --color-deep-forest: #1B3022;
-    --color-warm-cream: #F5F5DC;
-    --color-surface-low: #EDECD4;
-    --color-terracotta: #E17355;
-    --color-surface-variant: #E4E4CC;
-    --color-whatsapp: #25D366;
+    --color-deep-forest: #1b3022;
+    --color-warm-cream: #f5f5dc;
+    --color-surface-low: #edecd4;
+    --color-terracotta: #e17355;
+    --color-surface-variant: #e4e4cc;
+    --color-whatsapp: #25d366;
     --color-ambient-shadow: #796048;
 
     --font-display: 'Noto Serif', serif;
@@ -24,7 +24,7 @@
     html {
         scroll-behavior: smooth;
     }
-    
+
     body {
         @apply bg-warm-cream text-deep-forest font-body antialiased;
     }
@@ -46,7 +46,7 @@
         transform: translateY(2rem);
         transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    
+
     .reveal-up.active {
         opacity: 1;
         transform: translateY(0);

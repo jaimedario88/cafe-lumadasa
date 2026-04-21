@@ -1,38 +1,38 @@
 {
-  "name": "cafe-lumadasa",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.33.0",
-  "devDependencies": {
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@eslint/js": "^10.0.1",
-    "@tailwindcss/cli": "^4.2.2",
-    "eslint": "^10.2.0",
-    "globals": "^17.5.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
-    "prettier": "^3.8.2",
-    "prettier-plugin-go-template": "^0.0.15",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.58.2"
-  },
-  "lint-staged": {
-    "assets/ts/**/*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{html,css,yaml,yml,md}": [
-      "prettier --write"
-    ]
-  }
+    "name": "cafe-lumadasa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.33.0",
+    "devDependencies": {
+        "@commitlint/cli": "^20.5.0",
+        "@commitlint/config-conventional": "^20.5.0",
+        "@eslint/js": "^10.0.1",
+        "@tailwindcss/cli": "^4.2.2",
+        "eslint": "^10.2.0",
+        "globals": "^17.5.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.4.0",
+        "prettier": "^3.8.2",
+        "prettier-plugin-go-template": "^0.0.15",
+        "tailwindcss": "^4.2.2",
+        "typescript": "^6.0.2",
+        "typescript-eslint": "^8.58.2"
+    },
+    "lint-staged": {
+        "assets/ts/**/*.ts": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{html,css,yaml,yml,md}": [
+            "prettier --write"
+        ]
+    }
 }

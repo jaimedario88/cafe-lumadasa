@@ -2,24 +2,38 @@
     {{ with resources.Get "images/hero.png" }}
         {{ $hero := .Process "webp q90" }}
         <div class="absolute inset-0 z-0">
-            <img src="{{ $hero.RelPermalink }}" alt="Planadas Mountains" class="w-full h-full object-cover">
+            <img
+                src="{{ $hero.RelPermalink }}"
+                alt="Planadas Mountains"
+                class="w-full h-full object-cover"
+            />
             <div class="absolute inset-0 bg-deep-forest/40 backdrop-brightness-75"></div>
         </div>
     {{ end }}
 
+
     <div class="container mx-auto px-6 relative z-10 pt-24">
         <div class="max-w-4xl reveal-up active">
-            <span class="font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-warm-cream/80 mb-6 block">
+            <span
+                class="font-body text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-warm-cream/80 mb-6 block"
+            >
                 {{ hugo.Data.landing.hero.prefijo }}
             </span>
-            <h1 class="font-display text-6xl md:text-9xl text-warm-cream leading-[1.1] md:leading-[0.9] mb-8 text-balance">
+            <h1
+                class="font-display text-6xl md:text-9xl text-warm-cream leading-[1.1] md:leading-[0.9] mb-8 text-balance"
+            >
                 {{ hugo.Data.landing.hero.titulo }}
             </h1>
-            <p class="font-body text-xl md:text-2xl text-warm-cream/90 max-w-2xl mb-12 leading-relaxed text-balance">
+            <p
+                class="font-body text-xl md:text-2xl text-warm-cream/90 max-w-2xl mb-12 leading-relaxed text-balance"
+            >
                 {{ hugo.Data.landing.hero.subtitulo }}
             </p>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#seleccion" class="bg-terracotta text-warm-cream px-10 py-5 rounded-full font-body text-sm font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-lg text-center">
+                <a
+                    href="#seleccion"
+                    class="bg-terracotta text-warm-cream px-10 py-5 rounded-full font-body text-sm font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-lg text-center"
+                >
                     {{ hugo.Data.landing.hero.cta_label }}
                 </a>
             </div>
@@ -28,7 +42,11 @@
 
     <!-- Scroll Indicator -->
     <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-4">
-        <span class="font-body text-[10px] uppercase tracking-[0.4em] text-warm-cream/40 rotate-180 [writing-mode:vertical-lr]">Explorar</span>
+        <span
+            class="font-body text-[10px] uppercase tracking-[0.4em] text-warm-cream/40 rotate-180 [writing-mode:vertical-lr]"
+        >
+            Explorar
+        </span>
         <div class="w-px h-12 bg-linear-to-b from-warm-cream/40 to-transparent"></div>
     </div>
 </section>
