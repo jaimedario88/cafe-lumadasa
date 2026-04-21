@@ -29,6 +29,7 @@
 - **Data-First Content:** All metadata (Altitude: 1,600-1,900 msnm, Notes: Chocolate/Panela, Producers: Edwin & María Camila) must be pulled from `data/landing.yaml`.
 - **Typography Consistency:** All primary section headers ("Nuestra Historia", "La Selección", "Impacto") must use a unified structural footprint (e.g. `max-w-3xl`, strictly left-aligned, `text-5xl md:text-7xl leading-tight`) to establish a predictable editorial rhythm without chaotic custom sizing per block.
 - **Asymmetrical Templates:** When generating HTML, favor grid asymmetry (e.g. `col-span-4` vs `col-span-8` container pairings) to balance heavy text blocks with immersive imagery.
+- **Image Aspect Ratios:** Never use `h-auto` on responsive layout images, as dynamically uploaded client images may have unpredictable intrinsic proportions and break the grid structure. Always enforce a physical bounding box footprint using Tailwind aspect ratio utilities (e.g., `aspect-[3/4]`, `aspect-[4/5]`) combined with `object-cover`.
 - **The "Origin Card" Component:** Implement the signature card style for coffee origins using `surface-variant`. Internally, rely on clean vertical stacking: text on top, product photography sitting entirely flush and uncropped at the bottom (`w-full h-auto mt-auto`), allowing dark studio backgrounds to naturally integrate with the card base instead of using complex CSS cropping logic.
 - **SVG Asset Centralization:** Inline `<svg>` tags within HTML layouts are strictly prohibited. All SVGs _must_ be extracted into `assets/icons/` as clean `.svg` files and loaded dynamically using Hugo Pipes (e.g. `{{ with resources.Get "icons/name.svg" }}{{ .Content | safeHTML }}{{ end }}`) to keep layout geometry clean.
 - **Hugo Data Access:** Always use `hugo.Data` instead of `.Site.Data` or `site.Data` when accessing the `data/` directory. The `.Site.Data` property was deprecated in Hugo v0.156.0 and its use will trigger compilation warnings.
@@ -41,5 +42,5 @@
 
 ## 6. Git & Commit Workflow
 
-- **Automated Formatting:** The project relies rigidly on `Prettier` and `ESLint` intercepted by `Husky` pre-commit hooks via `lint-staged`. Code must pass these validations to enter the repository.
+- **Automated Formatting:** The project relies rigidly on `Prettier` and `ESLint` intercepted by `Husky` pre-commit hooks via `lint-staged`. Code must pass these validations to enter the repository. For HTML files, the `prettier-plugin-go-template` is strictly required to prevent Prettier from mangling Hugo template tags (`{{ ... }}`).
 - **Conventional Commits:** All Git commit messages must strictly abide by the Conventional Commits specification enforced by `commitlint`. Commits missing a semantic type (e.g. `feat:`, `fix:`, `chore:`, `refactor:`) will be rejected.

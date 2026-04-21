@@ -11,7 +11,7 @@
 - **Static Site Generator:** [Hugo](https://gohugo.io/) (Extended version required)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (Integrated natively via Hugo Pipes)
 - **Typography:** Noto Serif (Display / Editorial) & Manrope (Body / Functional)
-- **Image Processing:** Hugo Image Processing (`webp`, `q90`) for macro textures and high-quality photography.
+- **Image Processing:** Hugo Image Processing (`webp`, `q90`) for macro textures and high-quality photography. Bounding boxes are strictly enforced via Tailwind aspect ratios (`aspect-[3/4]`, `aspect-[4/5]`) and `object-cover` to ensure layout stability across varying source image proportions.
 
 ## 🎨 Design Philosophy
 
@@ -61,7 +61,7 @@
 
 ## 📜 Development Workflow
 
-- **Automated Formatting:** When you run `git commit`, Husky and `lint-staged` immediately intercept it, enforcing `eslint` checks on `.ts` files and running `prettier` natively over your `.html` and `.md` files. You do not need to format them manually.
+- **Automated Formatting:** When you run `git commit`, Husky and `lint-staged` immediately intercept it, enforcing `eslint` checks on `.ts` files and running `prettier` natively over your `.html` and `.md` files. (HTML formatting is strictly governed by `prettier-plugin-go-template` to protect Hugo syntax). You do not need to format them manually.
 - **Conventional Commits:** Your commit messages are tightly controlled via `commitlint`. You must prefix all commits semantically (e.g., `feat: added gallery section` or `fix: padding bug`).
 
 ## 📁 Architecture Notes
