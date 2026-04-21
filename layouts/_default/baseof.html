@@ -16,13 +16,20 @@
             rel="stylesheet"
         />
 
-        {{/* Defer ensures ALL templates are rendered before Tailwind scans */}} {{ with
-        (templates.Defer (dict "key" "global")) }} {{ partial "css.html" . }} {{ end }}
+        {{/* Defer ensures ALL templates are rendered before Tailwind scans */}}
+        {{ with
+            (templates.Defer (dict "key" "global"))
+        }}
+            {{ partial "css.html" . }}
+        {{ end }}
     </head>
 
     <body class="bg-warm-cream text-deep-forest font-body antialiased">
-        {{ block "main" . }}{{ end }} {{ partial "whatsapp-float.html" . }} {{ $ts := resources.Get
-        "ts/main.ts" | js.Build | minify | fingerprint }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "whatsapp-float.html" . }}
+        {{ $ts := resources.Get
+            "ts/main.ts" | js.Build | minify | fingerprint
+        }}
         <script src="{{ $ts.RelPermalink }}" defer></script>
     </body>
 </html>
