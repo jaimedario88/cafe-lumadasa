@@ -31,6 +31,7 @@
 - **Asymmetrical Templates:** When generating HTML, favor grid asymmetry (e.g. `col-span-4` vs `col-span-8` container pairings) to balance heavy text blocks with immersive imagery.
 - **The "Origin Card" Component:** Implement the signature card style for coffee origins using `surface-variant`. Internally, rely on clean vertical stacking: text on top, product photography sitting entirely flush and uncropped at the bottom (`w-full h-auto mt-auto`), allowing dark studio backgrounds to naturally integrate with the card base instead of using complex CSS cropping logic.
 - **SVG Asset Centralization:** Inline `<svg>` tags within HTML layouts are strictly prohibited. All SVGs _must_ be extracted into `assets/icons/` as clean `.svg` files and loaded dynamically using Hugo Pipes (e.g. `{{ with resources.Get "icons/name.svg" }}{{ .Content | safeHTML }}{{ end }}`) to keep layout geometry clean.
+- **Hugo Data Access:** Always use `hugo.Data` instead of `.Site.Data` or `site.Data` when accessing the `data/` directory. The `.Site.Data` property was deprecated in Hugo v0.156.0 and its use will trigger compilation warnings.
 
 ## 5. Interaction & Conversion
 
