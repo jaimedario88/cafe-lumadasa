@@ -24,7 +24,7 @@
                 <div class="pt-4 flex space-x-6">
                     {{ range hugo.Data.landing.pie.redes }} {{ if eq .label "WhatsApp" }}
                     <a
-                        href="https://wa.me/{{ site.Data.landing.cta.whatsapp.telefono }}?text={{ site.Data.landing.cta.whatsapp.mensaje | urlquery }}"
+                        href="https://wa.me/{{ hugo.Data.landing.cta.whatsapp.telefono }}?text={{ hugo.Data.landing.cta.whatsapp.mensaje | urlquery }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-warm-cream/40 hover:text-terracotta transition-colors uppercase text-[10px] font-bold tracking-[0.2em]"
