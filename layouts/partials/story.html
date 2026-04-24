@@ -5,11 +5,11 @@
             <div class="w-full md:w-5/12 relative">
                 {{ with resources.Get "images/producers.webp" }}
                     {{ $img := .Process "webp q90" }}
-                    <div class="relative z-10 -ml-20 md:-ml-40 pr-10 md:pr-0">
+                    <div class="relative z-10 -ml-0 lg:-ml-8 xl:-ml-20 pr-4 md:pr-8 lg:pr-0">
                         <img
                             src="{{ $img.RelPermalink }}"
                             alt="Producers"
-                            class="w-full aspect-[3/4] object-cover shadow-2xl rounded-tr-[100px] border-16 border-warm-cream"
+                            class="w-full aspect-square object-cover object-[20%_center] shadow-2xl rounded-tr-[60px] lg:rounded-tr-[100px] border-8 lg:border-16 border-warm-cream"
                         />
                     </div>
                 {{ end }}
