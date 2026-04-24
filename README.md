@@ -67,7 +67,7 @@
 ## 📁 Architecture Notes
 
 - **Data-Driven Content:** All structured content and coffee metadata (altitude, notes, producers) are pulled directly from `data/landing.yaml`.
-- **Modular Layouts:** The core `index.html` structure acts as a modular assembler pulling in partials like `hero`, `story`, `coffee-profile`, `impact`, and `contact`.
+- **Modular Layouts:** The core `index.html` structure acts as a modular assembler pulling in partials like `hero`, `story`, `coffee-profile`, `video`, `impact`, and `contact`.
 - **Asymmetrical Grid:** The project favors grid asymmetry to balance heavy text blocks with immersive imagery.
 - **TypeScript First:** All interactions reside cleanly in `assets/ts/components/` utilizing ES Modules and classes. Hugo pipes (`js.Build`) natively transpile these with zero external bundler scaffolding needed.
 
