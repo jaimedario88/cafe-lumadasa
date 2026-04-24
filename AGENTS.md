@@ -25,7 +25,7 @@
 
 ## 4. Hugo Architecture Rules
 
-- **Modular Assembler:** The `index.html` must be a clean list of partials: `hero`, `story`, `coffee-profile`, `impact`, `contact`.
+- **Modular Assembler:** The `index.html` must be a clean list of partials: `hero`, `story`, `coffee-profile`, `video`, `impact`, `contact`.
 - **Data-First Content:** All metadata (Altitude: 1,600-1,900 msnm, Notes: Chocolate/Panela, Producers: Edwin & María Camila) must be pulled from `data/landing.yaml`.
 - **Typography Consistency:** All primary section headers ("Nuestra Historia", "La Selección", "Impacto") must use a unified structural footprint (e.g. `max-w-3xl`, strictly left-aligned, `text-5xl md:text-7xl leading-tight`) to establish a predictable editorial rhythm without chaotic custom sizing per block.
 - **Asymmetrical Templates:** When generating HTML, favor grid asymmetry (e.g. `col-span-4` vs `col-span-8` container pairings) to balance heavy text blocks with immersive imagery.

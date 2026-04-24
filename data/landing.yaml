@@ -60,6 +60,12 @@ cafe:
     cita: >
         Cada taza representa esfuerzo, resiliencia y esperanza.
 
+# ─── Video ────────────────────────────────────────────────────────────────────
+video:
+    id: 'aVztPBs33tc'
+    cita: >
+        "Cosechado a mano, impulsado por el corazón."
+
 # ─── Impacto ──────────────────────────────────────────────────────────────────
 impacto:
     prefijo: 'Origen con Propósito'
