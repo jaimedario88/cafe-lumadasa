@@ -98,7 +98,7 @@ cta:
         te invitamos a descubrir los matices únicos de Planadas.
     label_primario: 'Adquirir Cosecha'
     label_secundario: 'Contáctanos'
-    email: 'contacto@lumadasa.com'
+    email: 'hola@cafelumadasa.com'
     whatsapp:
         telefono: '573000000000'
         mensaje: '¡Hola! Me gustaría obtener más información sobre los cafés de origen Lumadasa.'
@@ -112,6 +112,6 @@ pie:
           enlaces: []
     redes:
         - label: 'Instagram'
-          url: '#'
+          url: 'https://instagram.com/cafelumadasa'
         - label: 'WhatsApp'
           url: '#'
