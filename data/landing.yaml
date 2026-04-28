@@ -1,108 +1,117 @@
 # ─── Marca ────────────────────────────────────────────────────────────────────
 marca:
-  nombre: "LUMADASA"
-  lema: "Café con origen, historia y propósito"
-  ubicacion: "Planadas, Tolima – Colombia"
-  descripcion: >
-    Región reconocida por su tradición cafetera y su transformación social.
+    nombre: 'LUMADASA'
+    lema: 'Café con origen, historia y propósito'
+    ubicacion: 'Planadas, Tolima – Colombia'
+    descripcion: >
+        Región reconocida por su tradición cafetera y su transformación social.
 
 # ─── Hero ─────────────────────────────────────────────────────────────────────
 hero:
-  prefijo: "Planadas · Tolima · Colombia"
-  titulo: "Montañas y Resiliencia"
-  subtitulo: >
-    Cultivando los microclimas de Planadas, donde cada grano captura
-    un viaje de origen, tradición y resiliencia.
-  cta_label: "Nuestra cosecha"
+    prefijo: 'Planadas · Tolima · Colombia'
+    titulo: 'Montañas y Resiliencia'
+    subtitulo: >
+        Cultivando los microclimas de Planadas, donde cada grano captura
+        un viaje de origen, tradición y resiliencia.
+    cta_label: 'Nuestra cosecha'
 
 # ─── Nuestra Historia ─────────────────────────────────────────────────────────
 historia:
-  prefijo: "Nuestra Historia"
-  titulo: "El Legado del Suelo"
-  cuerpo: >
-    LUMADASA nace como un proyecto que busca transformar la realidad del campo,
-    conectando directamente a productores con consumidores.
-    Cada taza representa esfuerzo, resiliencia y esperanza.
-  productores:
-    - nombre: "Edwin Noreña"
-      rol: "Productor · Planadas, Tolima"
-    - nombre: "Camila Jaramillo"
-      rol: "Productora · Planadas, Tolima"
-  nota_productores: >
-    Familias campesinas de Planadas, Tolima, comprometidas con la producción
-    sostenible y la calidad.
+    prefijo: 'Nuestra Historia'
+    titulo: 'El Legado del Suelo'
+    cuerpo: >
+        LUMADASA nace como un proyecto que busca transformar la realidad del campo,
+        conectando directamente a productores con consumidores.
+        Cada taza representa esfuerzo, resiliencia y esperanza.
+    productores:
+        - nombre: 'Edwin Noreña'
+          rol: 'Productor · Planadas, Tolima'
+        - nombre: 'Camila Jaramillo'
+          rol: 'Productora · Planadas, Tolima'
+    nota_productores: >
+        Familias campesinas de Planadas, Tolima, comprometidas con la producción
+        sostenible y la calidad.
 
 # ─── El Café ──────────────────────────────────────────────────────────────────
 cafe:
-  prefijo: "El Café"
-  titulo: "La Selección"
-  subtitulo: >
-    Cada grano es cuidadosamente seleccionado para brindar una experiencia única.
-  perfil: "Suave y balanceado"
-  altitud: "1.600 – 1.900 msnm"
-  clima: "Templado de montaña"
-  sistema: "Sostenible"
-  procesos:
-    - "Honey"
-    - "Natural"
-  notas:
-    - "Chocolate"
-    - "Panela"
-    - "Frutos rojos"
-  terroir_titulo: "La Finca"
-  terroir_cuerpo: >
-    Nuestro café se cultiva en fincas ubicadas en zonas montañosas con
-    condiciones ideales para la producción de café de alta calidad.
-  microclima_titulo: "Excelencia de Microclima"
-  microclima_cuerpo: >
-    La altitud de Planadas genera el equilibrio ideal de temperatura,
-    humedad y luz para producir cafés de excepción cada año.
-  cita: >
-    Cada taza representa esfuerzo, resiliencia y esperanza.
+    prefijo: 'El Café'
+    titulo: 'La Selección'
+    subtitulo: >
+        Cada grano es cuidadosamente seleccionado para brindar una experiencia única.
+    perfil: 'Suave y balanceado'
+    altitud: '1.600 – 1.900 msnm'
+    clima: 'Templado de montaña'
+    sistema: 'Sostenible'
+    procesos:
+        - 'Honey'
+        - 'Natural'
+    notas:
+        - 'Chocolate'
+        - 'Panela'
+        - 'Frutos rojos'
+    terroir_titulo: 'La Finca'
+    terroir_cuerpo: >
+        Nuestro café se cultiva en fincas ubicadas en zonas montañosas con
+        condiciones ideales para la producción de café de alta calidad.
+    microclima_titulo: 'Excelencia de Microclima'
+    microclima_cuerpo: >
+        La altitud de Planadas genera el equilibrio ideal de temperatura,
+        humedad y luz para producir cafés de excepción cada año.
+    cita: >
+        Cada taza representa esfuerzo, resiliencia y esperanza.
+
+# ─── Video ────────────────────────────────────────────────────────────────────
+video:
+    id: 'aVztPBs33tc'
+    cita: >
+        "Cosechado a mano, impulsado por el corazón."
 
 # ─── Impacto ──────────────────────────────────────────────────────────────────
 impacto:
-  prefijo: "Origen con Propósito"
-  titulo: "Cultivo Responsable"
-  subtitulo: >
-    Al elegir este café estás apoyando familias rurales, el comercio justo
-    y la construcción de paz en Planadas.
-  pilares:
-    - icono: "leaf"
-      titulo: "Suelo, Agua y Biodiversidad"
-      cuerpo: >
-        Trabajamos con prácticas responsables que protegen el suelo,
-        el agua y la biodiversidad de nuestros ecosistemas.
-    - icono: "wheat"
-      titulo: "Familias Rurales"
-      cuerpo: >
-        Cada compra apoya directamente a familias campesinas comprometidas
-        con la calidad y la producción sostenible.
-    - icono: "handshake"
-      titulo: "Comercio Justo y Paz"
-      cuerpo: >
-        Impulsamos el desarrollo local y la construcción de paz a través
-        del comercio directo y transparente.
+    prefijo: 'Origen con Propósito'
+    titulo: 'Cultivo Responsable'
+    subtitulo: >
+        Al elegir este café estás apoyando familias rurales, el comercio justo
+        y la construcción de paz en Planadas.
+    pilares:
+        - icono: 'leaf'
+          titulo: 'Suelo, Agua y Biodiversidad'
+          cuerpo: >
+              Trabajamos con prácticas responsables que protegen el suelo,
+              el agua y la biodiversidad de nuestros ecosistemas.
+        - icono: 'wheat'
+          titulo: 'Familias Rurales'
+          cuerpo: >
+              Cada compra apoya directamente a familias campesinas comprometidas
+              con la calidad y la producción sostenible.
+        - icono: 'handshake'
+          titulo: 'Comercio Justo y Paz'
+          cuerpo: >
+              Impulsamos el desarrollo local y la construcción de paz a través
+              del comercio directo y transparente.
 
 # ─── CTA Final ────────────────────────────────────────────────────────────────
 cta:
-  titulo: "Únete a la Narrativa"
-  cuerpo: >
-    Ya seas tostador, barista o simplemente un amante del buen café,
-    te invitamos a descubrir los matices únicos de Planadas.
-  label_primario: "Adquirir Cosecha"
-  label_secundario: "Contáctanos"
-  email: "contacto@lumadasa.com"
+    titulo: 'Únete a la Narrativa'
+    cuerpo: >
+        Ya seas tostador, barista o simplemente un amante del buen café,
+        te invitamos a descubrir los matices únicos de Planadas.
+    label_primario: 'Adquirir Cosecha'
+    label_secundario: 'Contáctanos'
+    email: 'hola@cafelumadasa.com'
+    whatsapp:
+        telefono: '573000000000'
+        mensaje: '¡Hola! Me gustaría obtener más información sobre los cafés de origen Lumadasa.'
 
 # ─── Pie de Página ────────────────────────────────────────────────────────────
 pie:
-  tagline: >
-    Productora familiar de café de especialidad en Planadas, Tolima, Colombia.
-  columnas:
-    - titulo: "Contáctanos"
-      enlaces: []
-  redes:
-    - label: "Instagram"
-      url: "#"
-    - label: "WhatsApp"
-      url: "#"
+    tagline: >
+        Productora familiar de café de especialidad en Planadas, Tolima, Colombia.
+    columnas:
+        - titulo: 'Contáctanos'
+          enlaces: []
+    redes:
+        - label: 'Instagram'
+          url: 'https://instagram.com/cafelumadasa'
+        - label: 'WhatsApp'
+          url: '#'

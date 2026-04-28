@@ -1,0 +1,27 @@
+{{ $data := hugo.Data.landing.video }}
+<section
+    class="relative w-full h-[80vh] min-h-[500px] flex items-center justify-center overflow-hidden"
+>
+    <!-- Video Background Container -->
+    <div class="absolute inset-0 z-0">
+        <!-- YouTube iframe tailored to cover background -->
+        <iframe
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[56.25vw] min-h-[100%] min-w-[177.77vh] pointer-events-none"
+            src="https://www.youtube.com/embed/{{ $data.id }}?autoplay=1&mute=1&loop=1&playlist={{ $data.id }}&controls=0&showinfo=0&rel=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+        ></iframe>
+        <!-- Color Overlay -->
+        <div class="absolute inset-0 bg-deep-forest/60"></div>
+    </div>
+
+    <!-- Text Content -->
+    <div class="relative z-10 text-center px-6 max-w-4xl">
+        <p
+            class="font-display text-4xl md:text-6xl lg:text-7xl text-warm-cream italic leading-tight drop-shadow-lg text-balance"
+        >
+            {{ $data.cita }}
+        </p>
+    </div>
+</section>
